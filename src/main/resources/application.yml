@@ -1,0 +1,14 @@
+# Application Properties
+spring:
+  application:
+    name: encryption
+
+# Security Properties
+security:
+  basic:
+    enabled: false
+
+# Logging Properties
+logging:
+  level:
+    root: INFO

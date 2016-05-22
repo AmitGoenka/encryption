@@ -1,0 +1,22 @@
+# IntelliJ files #
+# -------------- #
+*.iml
+/.idea
+#/.mvn
+
+# All Maven target directories #
+# Ignore code under any directory (at any level) named target #
+# ------------------------ #
+target/
+
+# Exploded WAR directory #
+# Add/change name here if your directory name is different #
+# ------------------------ #
+
+# Compiled classes/packages #
+# Additional checks just in case #
+# ------------------------ #
+#*.class
+#*.jar
+#*.war
+#mvnw*

@@ -1,0 +1,6 @@
+test:
+  aesWithKeyStore:
+    password: test
+    salt:
+    iv:
+    isEncrypted: false

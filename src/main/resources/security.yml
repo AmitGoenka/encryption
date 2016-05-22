@@ -1,0 +1,19 @@
+#External Configuration Properties
+security:
+  config:
+    # IMPORTANT NOTE:
+    # This location should be set to an external configuration directory in a secure environment
+    # All the generated resources (keystore files, yaml config file with key data) should reside in this directory
+    # We will use the test resources directory as storage for demontration and usability purposes
+    location: src/test/resources
+    filename: appSecurity-${spring.application.name}.yml
+    keystore-secret:
+      type: JCEKS
+      filename: ${spring.application.name}-jceks.keystore
+      password:
+      master-key:
+        alias:
+    keystore-ssl:
+      type: JKS
+      filename: mockKeystore.jks
+      password: password
