@@ -10,7 +10,6 @@ Following libraries are used:
 
 * Java Crypto API
 * Jasypt
-* ESAPI
 
 For key stores, examples include:
 

@@ -20,3 +20,7 @@ target/
 #*.jar
 #*.war
 #mvnw*
+
+# Generated test artifacts
+/src/test/resources/mockKeystore.jceks
+/src/test/resources/mockKeystore.jceks.info
