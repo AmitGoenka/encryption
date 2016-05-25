@@ -1,6 +1,6 @@
 test:
-  aesWithKeyStore:
-    password: test
+  encryption:
     salt:
     iv:
+    password: SamplePassword
     isEncrypted: false

@@ -1,10 +1,12 @@
 package com.amitgoenka.encryption.keystore;
 
+import com.amitgoenka.encryption.EncryptionApplicationTests;
+import com.amitgoenka.encryption.TestPropertyHolder;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.ConfigFileApplicationContextInitializer;
+import org.springframework.boot.test.ConfigFileApplicationContextInitializer;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.StringUtils;
@@ -18,8 +20,11 @@ import java.security.cert.CertificateException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-        classes = {TestPropertyHolder.class},
-        initializers = {ConfigFileApplicationContextInitializer.class}
+        initializers = {ConfigFileApplicationContextInitializer.class},
+        classes = {
+                EncryptionApplicationTests.class,
+                TestPropertyHolder.class
+        }
 )
 public class KeyStoreTest {
 
@@ -40,6 +45,7 @@ public class KeyStoreTest {
         String key = JceksKeyStoreUtil.getKey(filename, password, alias);
         Assert.assertFalse(StringUtils.isEmpty(key));
     }
+
 
     @Test
     public void getKeyFromJKSTest() throws Exception {

@@ -1,21 +1,19 @@
-package com.amitgoenka.encryption.keystore;
+package com.amitgoenka.encryption;
 
-import com.amitgoenka.encryption.EncryptionApplicationTests;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Import;
 
 @Getter
 @Setter
-@Import(value = {EncryptionApplicationTests.class})
 @ConfigurationProperties(prefix = "security.config")
-class TestPropertyHolder {
+public class TestPropertyHolder {
 
     private String location;
     private String filename;
     private Keystore keystoreSecret;
     private Keystore keystoreSsl;
+    private Jasypt jasypt;
 
     @Getter
     @Setter
@@ -30,6 +28,12 @@ class TestPropertyHolder {
         public static class MasterKey {
             private String alias;
         }
+    }
+
+    @Getter
+    @Setter
+    public static class Jasypt {
+        private String filename;
     }
 
 }

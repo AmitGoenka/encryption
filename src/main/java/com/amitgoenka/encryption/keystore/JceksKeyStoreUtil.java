@@ -11,7 +11,7 @@ import java.math.BigInteger;
 import java.security.*;
 import java.security.cert.CertificateException;
 
-class JceksKeyStoreUtil {
+public class JceksKeyStoreUtil {
 
     private static final transient String type = "JCEKS";
     private static final transient String keySpec = "AES";
@@ -55,7 +55,7 @@ class JceksKeyStoreUtil {
         return null;
     }
 
-    static void buildKeyStore(String filename) throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, UnrecoverableEntryException {
+    static void buildKeyStore(String filename) throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException {
         // Initialize the Password
         String password = getRandom();
         KeyStore.PasswordProtection keyPassword = new KeyStore.PasswordProtection(password.toCharArray());
@@ -85,7 +85,7 @@ class JceksKeyStoreUtil {
         writeInfoToFile(filename + ".info", infoBuilder);
     }
 
-    static String getKey(String filename, String password, String alias) throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, UnrecoverableEntryException {
+    public static String getKey(String filename, String password, String alias) throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException, UnrecoverableEntryException {
         // Retrieve the keystore
         KeyStore secretKeyStore = getKeyStore(type, password, filename);
         if (secretKeyStore == null) return null;
