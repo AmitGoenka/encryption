@@ -16,7 +16,7 @@ import java.util.Base64;
 import java.util.Random;
 
 /**
- * AES Encryption Utility class using standard Java libraries
+ * AES Encryption Utility class using standard Java
  */
 class AESEncryptionUtil {
 
@@ -25,7 +25,7 @@ class AESEncryptionUtil {
     private static final transient String cipherAlgorithm = "AES/CBC/PKCS5Padding";
     private static final transient String secureRandomAlgorithm = "SHA1PRNG";
     private static final transient String messageDigestAlgorithm = "SHA-256";
-    private static final transient String charsetName = "UTF-8";
+    private static final transient String charsetName = "UTF-16";
     private static final transient String encodingStyle = Base64.class.getSimpleName();
     private static final transient int keyLength = 256;
     private static final transient int saltLength = 20;
