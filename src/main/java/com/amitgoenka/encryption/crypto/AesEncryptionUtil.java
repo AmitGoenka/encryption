@@ -16,7 +16,7 @@ import java.util.Base64;
 import java.util.Random;
 
 /**
- * AES Encryption Utility class
+ * AES Encryption Utility class using standard Java libraries
  */
 class AESEncryptionUtil {
 
