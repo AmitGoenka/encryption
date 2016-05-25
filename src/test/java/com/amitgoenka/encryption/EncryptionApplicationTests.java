@@ -1,15 +1,17 @@
 package com.amitgoenka.encryption;
 
+import com.amitgoenka.encryption.config.ExternalPropertySourcesConfigurer;
+import com.amitgoenka.encryption.config.PropertySourcesConfigurer;
+import com.amitgoenka.encryption.crypto.AESEncryptor;
+import com.amitgoenka.encryption.props.ExternalPropertyEncryptor;
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest
 @Import(value = {
         EncryptionApplication.class,
+        AESEncryptor.class,
+        ExternalPropertyEncryptor.class,
         ExternalPropertySourcesConfigurer.class,
         PropertySourcesConfigurer.class,
 })
@@ -17,6 +19,7 @@ public class EncryptionApplicationTests {
 
     @Test
     public void contextLoads() {
+        Assert.assertTrue(true);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.amitgoenka.encryption;
+package com.amitgoenka.encryption.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class PropertySourcesConfigurer {
     static Properties externalProperties;
 
     @Bean
-    @DependsOn({"externalProperties"})
+    @DependsOn({"aesEncryptor", "propertyEncryptor", "externalProperties"})
     public static PropertySourcesPlaceholderConfigurer propertySourcesConfigurer() throws IOException {
         PropertySourcesPlaceholderConfigurer propertySourcesConfigurer = new PropertySourcesPlaceholderConfigurer();
         propertySourcesConfigurer.setIgnoreUnresolvablePlaceholders(true);

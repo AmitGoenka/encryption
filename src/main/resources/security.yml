@@ -10,12 +10,14 @@ security:
     keystore-secret:
       type: JCEKS
       filename: mockKeystore.jceks
-      password: 9fqjfasv31h6np1ucauoop48nd # Generated JCEKS password from 'mockKeystore.jceks.info' goes here
+      password:  # Generated JCEKS password from 'mockKeystore.jceks.info' goes here
       master-key:
-        alias: c79dvjc2d26s460f73jmorq129 # Generated JCEKS master key alias from 'mockKeystore.jceks.info' goes here
+        alias:  # Generated JCEKS master key alias from 'mockKeystore.jceks.info' goes here
     keystore-ssl:
       type: JKS
       filename: mockKeystore.jks
       password: password
       master-key:
         alias: selfsigned
+    jasypt:
+      filename: mock-jasypt-encryption.properties
